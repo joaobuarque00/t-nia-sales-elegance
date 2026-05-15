@@ -41,7 +41,7 @@ export function Navbar() {
           ))}
         </nav>
         <a
-          href="#contato"
+          href={WHATSAPP_URL}
           className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 text-xs uppercase tracking-[0.25em] text-onyx bg-gradient-gold rounded-sm font-medium hover:shadow-gold transition-all duration-500"
         >
           Pedir Orçamento
@@ -64,7 +64,7 @@ export function Navbar() {
                 {l.label}
               </a>
             ))}
-            <a href="#contato" onClick={() => setOpen(false)} className="mt-2 text-center px-5 py-3 text-xs uppercase tracking-[0.25em] text-onyx bg-gradient-gold rounded-sm font-medium">
+            <a href={WHATSAPP_URL} onClick={() => setOpen(false)} className="mt-2 text-center px-5 py-3 text-xs uppercase tracking-[0.25em] text-onyx bg-gradient-gold rounded-sm font-medium">
               Pedir Orçamento
             </a>
           </div>
