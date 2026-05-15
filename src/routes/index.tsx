@@ -103,7 +103,7 @@ function Home() {
           </p>
           <div className="animate-fade-up flex flex-col sm:flex-row items-center justify-center gap-4" style={{ animationDelay: "700ms" }}>
             <a
-              href="#contato"
+              href={WHATSAPP_URL}
               className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-gold text-onyx text-xs uppercase tracking-[0.3em] font-semibold rounded-sm hover:shadow-gold transition-all duration-500"
             >
               Pedir Orçamento
@@ -336,99 +336,13 @@ function Home() {
               Receba uma proposta personalizada em até 24 horas. Sem compromisso, com toda a atenção que você merece.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#contato" className="px-10 py-4 bg-gradient-gold text-onyx text-xs uppercase tracking-[0.3em] font-semibold rounded-sm hover:shadow-gold transition-all duration-500">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="px-10 py-4 bg-gradient-gold text-onyx text-xs uppercase tracking-[0.3em] font-semibold rounded-sm hover:shadow-gold transition-all duration-500">
                 Solicitar Orçamento
               </a>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="px-10 py-4 border border-gold/50 text-foreground text-xs uppercase tracking-[0.3em] hover:bg-gold/10 hover:border-gold transition-all duration-500 rounded-sm">
                 Chamar no WhatsApp
               </a>
             </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* CONTATO */}
-      <section id="contato" className="py-28 lg:py-40 bg-card/30">
-        <div className="mx-auto max-w-6xl px-6 lg:px-10 grid lg:grid-cols-2 gap-16">
-          <Reveal>
-            <p className="text-[0.7rem] uppercase tracking-[0.4em] text-gold mb-5">Contato</p>
-            <h2 className="font-display text-4xl lg:text-5xl mb-6">
-              Vamos criar algo <span className="italic text-gradient-gold">extraordinário</span>
-            </h2>
-            <div className="gold-divider w-24 mb-8" />
-            <p className="text-muted-foreground font-light leading-relaxed mb-10">
-              Conte-nos sobre o seu evento. Nossa equipe entra em contato com uma proposta sob medida.
-            </p>
-            <div className="space-y-6">
-              <div>
-                <div className="text-xs uppercase tracking-widest text-gold mb-1">WhatsApp</div>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-gold transition-colors text-lg font-light">(00) 00000-0000</a>
-              </div>
-              <div>
-                <div className="text-xs uppercase tracking-widest text-gold mb-1">Email</div>
-                <a href="mailto:contato@taniasalesbuffet.com.br" className="text-foreground hover:text-gold transition-colors text-lg font-light">contato@taniasalesbuffet.com.br</a>
-              </div>
-              <div>
-                <div className="text-xs uppercase tracking-widest text-gold mb-1">Instagram</div>
-                <a href="https://instagram.com/taniasalesbuffet" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-gold transition-colors text-lg font-light">@taniasalesbuffet</a>
-              </div>
-              <div>
-                <div className="text-xs uppercase tracking-widest text-gold mb-1">Atendimento</div>
-                <p className="text-foreground text-lg font-light">Seg a Sáb · 09h às 19h</p>
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal delay={150}>
-            <form
-              className="luxe-card rounded-sm p-8 lg:p-10 space-y-6"
-              onSubmit={(e) => {
-                e.preventDefault();
-                const fd = new FormData(e.currentTarget);
-                const msg = `Olá! Sou ${fd.get("nome")}. Evento: ${fd.get("evento")}. Data: ${fd.get("data")}. Convidados: ${fd.get("convidados")}. ${fd.get("msg")}`;
-                window.open(`https://wa.me/5500000000000?text=${encodeURIComponent(msg)}`, "_blank");
-              }}
-            >
-              <div>
-                <label className="text-xs uppercase tracking-widest text-gold mb-2 block">Nome</label>
-                <input name="nome" required className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-foreground transition-colors" />
-              </div>
-              <div className="grid grid-cols-2 gap-6">
-                <div>
-                  <label className="text-xs uppercase tracking-widest text-gold mb-2 block">Telefone</label>
-                  <input name="telefone" required className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-foreground" />
-                </div>
-                <div>
-                  <label className="text-xs uppercase tracking-widest text-gold mb-2 block">Convidados</label>
-                  <input name="convidados" type="number" className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-foreground" />
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-6">
-                <div>
-                  <label className="text-xs uppercase tracking-widest text-gold mb-2 block">Evento</label>
-                  <select name="evento" className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-foreground">
-                    <option className="bg-background">Casamento</option>
-                    <option className="bg-background">15 Anos</option>
-                    <option className="bg-background">Aniversário</option>
-                    <option className="bg-background">Festa Infantil</option>
-                    <option className="bg-background">Formatura</option>
-                    <option className="bg-background">Corporativo</option>
-                    <option className="bg-background">Outro</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="text-xs uppercase tracking-widest text-gold mb-2 block">Data</label>
-                  <input name="data" type="date" className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-foreground" />
-                </div>
-              </div>
-              <div>
-                <label className="text-xs uppercase tracking-widest text-gold mb-2 block">Mensagem</label>
-                <textarea name="msg" rows={3} className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-foreground resize-none" />
-              </div>
-              <button type="submit" className="w-full mt-4 px-8 py-4 bg-gradient-gold text-onyx text-xs uppercase tracking-[0.3em] font-semibold rounded-sm hover:shadow-gold transition-all duration-500">
-                Enviar Solicitação
-              </button>
-            </form>
           </Reveal>
         </div>
       </section>
