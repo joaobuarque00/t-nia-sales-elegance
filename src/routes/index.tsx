@@ -103,7 +103,7 @@ function Home() {
           </p>
           <div className="animate-fade-up flex flex-col sm:flex-row items-center justify-center gap-4" style={{ animationDelay: "700ms" }}>
             <a
-              href="#contato"
+              href={WHATSAPP_URL}
               className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-gold text-onyx text-xs uppercase tracking-[0.3em] font-semibold rounded-sm hover:shadow-gold transition-all duration-500"
             >
               Pedir Orçamento
@@ -336,7 +336,7 @@ function Home() {
               Receba uma proposta personalizada em até 24 horas. Sem compromisso, com toda a atenção que você merece.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#contato" className="px-10 py-4 bg-gradient-gold text-onyx text-xs uppercase tracking-[0.3em] font-semibold rounded-sm hover:shadow-gold transition-all duration-500">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="px-10 py-4 bg-gradient-gold text-onyx text-xs uppercase tracking-[0.3em] font-semibold rounded-sm hover:shadow-gold transition-all duration-500">
                 Solicitar Orçamento
               </a>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="px-10 py-4 border border-gold/50 text-foreground text-xs uppercase tracking-[0.3em] hover:bg-gold/10 hover:border-gold transition-all duration-500 rounded-sm">

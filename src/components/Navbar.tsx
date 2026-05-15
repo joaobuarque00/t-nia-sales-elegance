@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { WHATSAPP_URL } from "@/components/WhatsAppFloat";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
