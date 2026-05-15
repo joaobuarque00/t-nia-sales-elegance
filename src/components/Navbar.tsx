@@ -6,7 +6,6 @@ const links = [
   { href: "#galeria", label: "Galeria" },
   { href: "#cardapio", label: "Cardápio" },
   { href: "#depoimentos", label: "Depoimentos" },
-  { href: "#contato", label: "Contato" },
 ];
 
 export function Navbar() {
