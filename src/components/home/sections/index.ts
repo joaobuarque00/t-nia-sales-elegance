@@ -1,0 +1,12 @@
+export { AboutSection } from "./AboutSection";
+export { BudgetSection } from "./BudgetSection";
+export { DifferentialsSection } from "./DifferentialsSection";
+export { Footer } from "./Footer";
+export { GallerySection } from "./GallerySection";
+export { HeroSection } from "./HeroSection";
+export { InstagramSection } from "./InstagramSection";
+export { MenuSection } from "./MenuSection";
+export { ServicesSection } from "./ServicesSection";
+export { SignatureHighlights } from "./SignatureHighlights";
+export { StatsStrip } from "./StatsStrip";
+export { TestimonialsSection } from "./TestimonialsSection";

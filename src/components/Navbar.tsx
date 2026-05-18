@@ -1,70 +1,93 @@
+import { Menu, MessageCircle, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { WHATSAPP_URL } from "@/components/WhatsAppFloat";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
   { href: "#servicos", label: "Eventos" },
-  { href: "#galeria", label: "Galeria" },
+  { href: "#galeria", label: "Fotos" },
   { href: "#cardapio", label: "Cardápio" },
-  { href: "#depoimentos", label: "Depoimentos" },
+  { href: "#orcamento", label: "Orçamento" },
 ];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll);
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-40 transition-all duration-500 ${
-        scrolled ? "bg-onyx/85 backdrop-blur-xl border-b border-gold/15" : "bg-transparent"
+      className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
+        scrolled ? "border-b border-gold/15 bg-onyx/85 backdrop-blur-xl" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between h-20">
-        <a href="#top" className="flex items-center gap-3 group">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
+        <a href="#top" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
           <span className="font-display text-xl tracking-wide text-gradient-gold">Tânia Sales</span>
-          <span className="hidden sm:inline text-[0.65rem] uppercase tracking-[0.3em] text-muted-foreground border-l border-gold/30 pl-3">Buffet</span>
+          <span className="hidden border-l border-gold/30 pl-3 text-[0.65rem] uppercase tracking-[0.3em] text-muted-foreground sm:inline">
+            Buffet
+          </span>
         </a>
-        <nav className="hidden lg:flex items-center gap-9">
+
+        <nav className="hidden items-center gap-7 lg:flex">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm tracking-wide text-foreground/80 hover:text-gold transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-6px] after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all hover:after:w-full"
+              className="relative text-sm tracking-wide text-foreground/80 transition-colors duration-300 after:absolute after:bottom-[-6px] after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all after:content-[''] hover:text-gold hover:after:w-full"
             >
               {l.label}
             </a>
           ))}
         </nav>
+
         <a
-          href={WHATSAPP_URL}
-          className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 text-xs uppercase tracking-[0.25em] text-onyx bg-gradient-gold rounded-sm font-medium hover:shadow-gold transition-all duration-500"
+          href="#orcamento"
+          className="hidden min-h-11 items-center gap-2 rounded-sm bg-gradient-gold px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-onyx transition-all duration-500 hover:shadow-gold lg:inline-flex"
         >
+          <MessageCircle className="h-4 w-4" aria-hidden="true" />
           Pedir Orçamento
         </a>
+
         <button
-          aria-label="Menu"
-          className="lg:hidden text-gold"
-          onClick={() => setOpen(!open)}
+          type="button"
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={open}
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-gold/25 text-gold transition-colors hover:bg-gold/10 lg:hidden"
+          onClick={() => setOpen((value) => !value)}
         >
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-            {open ? <path d="M6 6l12 12M6 18L18 6" /> : <path d="M3 7h18M3 12h18M3 17h18" />}
-          </svg>
+          {open ? (
+            <X className="h-5 w-5" aria-hidden="true" />
+          ) : (
+            <Menu className="h-5 w-5" aria-hidden="true" />
+          )}
         </button>
       </div>
+
       {open && (
-        <div className="lg:hidden bg-onyx/95 backdrop-blur-xl border-t border-gold/15 animate-fade-up">
-          <div className="px-6 py-6 flex flex-col gap-4">
+        <div className="animate-fade-up border-t border-gold/15 bg-onyx/95 backdrop-blur-xl lg:hidden">
+          <div className="flex flex-col gap-2 px-6 py-6">
             {links.map((l) => (
-              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-foreground/85 hover:text-gold py-2 border-b border-border/30">
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className="border-b border-border/30 py-3 text-foreground/85 transition-colors hover:text-gold"
+              >
                 {l.label}
               </a>
             ))}
-            <a href={WHATSAPP_URL} onClick={() => setOpen(false)} className="mt-2 text-center px-5 py-3 text-xs uppercase tracking-[0.25em] text-onyx bg-gradient-gold rounded-sm font-medium">
+            <a
+              href="#orcamento"
+              onClick={() => setOpen(false)}
+              className="mt-3 inline-flex min-h-12 items-center justify-center gap-2 rounded-sm bg-gradient-gold px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.22em] text-onyx"
+            >
+              <MessageCircle className="h-4 w-4" aria-hidden="true" />
               Pedir Orçamento
             </a>
           </div>
