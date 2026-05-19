@@ -17,13 +17,15 @@ import {
   WandSparkles,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import heroImg from "@/assets/hero.jpg";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import g5 from "@/assets/gallery-5.jpg";
-import g6 from "@/assets/gallery-6.jpg";
+import buffetArrozCamarao from "@/assets/buffet/buffet-arroz-camarao.jpeg";
+import buffetCamaraoCrocante from "@/assets/buffet/buffet-camarao-crocante.jpeg";
+import buffetMassaCamarao from "@/assets/buffet/buffet-massa-camarao.jpeg";
+import buffetMesaFria from "@/assets/buffet/buffet-mesa-fria.jpeg";
+import buffetMorangos from "@/assets/buffet/buffet-morangos.jpeg";
+import buffetRagu from "@/assets/buffet/buffet-ragu.jpeg";
+import buffetSaladaCamarao from "@/assets/buffet/buffet-salada-camarao.jpeg";
+import buffetVolAuVent from "@/assets/buffet/buffet-vol-au-vent.jpeg";
+import menuFeatureImg from "@/assets/gallery-4.jpg";
 
 export type IconContent = {
   title: string;
@@ -40,11 +42,18 @@ export type MenuCategory = {
 };
 
 export const homeImages = {
-  hero: heroImg,
-  about: g1,
-  menuFeature: g4,
-  quoteBackground: g3,
-  instagram: [g1, g2, g3, g4, g5, g6],
+  hero: buffetMesaFria,
+  about: buffetCamaraoCrocante,
+  menuFeature: menuFeatureImg,
+  quoteBackground: buffetMorangos,
+  instagram: [
+    buffetMesaFria,
+    buffetSaladaCamarao,
+    buffetMassaCamarao,
+    buffetCamaraoCrocante,
+    buffetMorangos,
+    buffetRagu,
+  ],
 };
 
 export const services: IconContent[] = [
@@ -218,18 +227,18 @@ export const quoteDetails = [
 ];
 
 export const gallery = [
-  { src: g1, alt: "Salão luxuoso com lustre dourado" },
-  { src: g2, alt: "Decoração de aniversário com balões dourados" },
-  { src: g3, alt: "Salão escuro com mesas postas" },
-  { src: g4, alt: "Canapés gourmet em prato preto" },
-  { src: g5, alt: "Bolo de 15 anos com rosas vinho" },
-  { src: g6, alt: "Mesa de doces sofisticada" },
+  { src: buffetMesaFria, alt: "Mesa de buffet com frios, frutas e pratos servidos" },
+  { src: buffetMassaCamarao, alt: "Massa com camarões servida em réchaud" },
+  { src: buffetVolAuVent, alt: "Prato folhado decorado com molho e flores comestíveis" },
+  { src: buffetMorangos, alt: "Travessa com morangos em mesa de evento" },
+  { src: buffetRagu, alt: "Molho servido em peça de vidro sobre mesa de buffet" },
+  { src: buffetArrozCamarao, alt: "Mesa de buffet com arroz, camarões e acompanhamentos" },
 ];
 
 export const heroPreview = [
-  { src: g4, alt: "Canapés gourmet em prato preto" },
-  { src: g5, alt: "Bolo de 15 anos com rosas vinho" },
-  { src: g6, alt: "Mesa de doces sofisticada" },
+  { src: buffetSaladaCamarao, alt: "Salada de camarão em travessa de vidro" },
+  { src: buffetCamaraoCrocante, alt: "Camarões crocantes servidos com molho" },
+  { src: buffetVolAuVent, alt: "Prato folhado decorado com molho e flores comestíveis" },
 ];
 
 export const eventPills = ["Casamentos", "15 anos", "Aniversários", "Corporativos"];

@@ -1,13 +1,11 @@
-import { eventPills, heroPreview, homeImages } from "@/data/home-content";
-
-const signatureLine = ["Gastronomia refinada", "Decoração autoral", "Serviço impecável"];
+import { heroPreview, homeImages } from "@/data/home-content";
 
 export function HeroSection() {
   return (
     <section className="relative flex min-h-[96svh] items-center justify-center overflow-hidden pb-24 pt-28">
       <img
         src={homeImages.hero}
-        alt="Mesa de banquete sofisticada com velas douradas e flores vinho"
+        alt="Mesa de buffet com frios, frutas e pratos servidos"
         className="absolute inset-0 h-full w-full scale-105 object-cover"
         width={1920}
         height={1080}
@@ -17,8 +15,8 @@ export function HeroSection() {
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 text-center">
         <div className="animate-fade-up" style={{ animationDelay: "100ms" }}>
-          <p className="mb-6 text-[0.7rem] uppercase tracking-[0.38em] text-gold/85">
-            Buffet Premium · Desde 2010
+          <p className="mb-7 text-[0.68rem] uppercase tracking-[0.32em] text-gold/75">
+            Buffet premium
           </p>
         </div>
 
@@ -27,43 +25,15 @@ export function HeroSection() {
           style={{ animationDelay: "300ms" }}
         >
           <span className="block text-foreground">Tânia Sales</span>
-          <span className="shimmer mt-2 block font-normal italic">Buffet</span>
+          <span className="mt-3 block text-[0.82em] font-normal italic text-gradient-gold">Buffet</span>
         </h1>
 
         <p
-          className="animate-fade-up mx-auto mb-10 mt-8 max-w-2xl text-lg font-light leading-relaxed text-foreground/85 sm:text-xl"
+          className="animate-fade-up mx-auto mt-8 max-w-xl text-base font-light leading-relaxed text-foreground/78 sm:text-lg"
           style={{ animationDelay: "500ms" }}
         >
-          A arte de transformar momentos em memórias eternas. Gastronomia refinada, decoração
-          autoral e o serviço impecável que o seu evento merece.
+          Gastronomia e decoração para celebrações elegantes, planejadas em cada detalhe.
         </p>
-
-        <div
-          className="animate-fade-up mx-auto flex max-w-2xl flex-wrap items-center justify-center gap-2"
-          style={{ animationDelay: "620ms" }}
-        >
-          {eventPills.map((item) => (
-            <span
-              key={item}
-              className="rounded-full border border-gold/25 bg-onyx/35 px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-foreground/80 backdrop-blur-md"
-            >
-              {item}
-            </span>
-          ))}
-        </div>
-
-        <div
-          className="animate-fade-up mx-auto mt-9 flex max-w-3xl items-center justify-center gap-4 text-[0.68rem] uppercase tracking-[0.24em] text-foreground/72"
-          style={{ animationDelay: "760ms" }}
-        >
-          <span className="hidden h-px w-16 bg-gold/35 sm:block" />
-          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
-            {signatureLine.map((item) => (
-              <span key={item}>{item}</span>
-            ))}
-          </div>
-          <span className="hidden h-px w-16 bg-gold/35 sm:block" />
-        </div>
       </div>
 
       <div className="absolute bottom-10 right-10 z-10 hidden grid-cols-3 gap-3 xl:grid">

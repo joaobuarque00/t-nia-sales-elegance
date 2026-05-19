@@ -11,7 +11,7 @@ export function AboutSection() {
           <div className="relative">
             <img
               src={homeImages.about}
-              alt="Salão de festas elegante"
+              alt="Camarões crocantes servidos com molho"
               loading="lazy"
               width={1024}
               height={1280}

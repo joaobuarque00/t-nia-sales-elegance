@@ -15,11 +15,11 @@ export function GallerySection() {
               kicker="Galeria"
               title={
                 <>
-                  Momentos que <span className="italic text-gradient-gold">contam histórias</span>
+                  Sabores que <span className="italic text-gradient-gold">contam histórias</span>
                 </>
               }
             >
-              <p>Um recorte da atmosfera, dos detalhes e da experiência que o buffet entrega.</p>
+              <p>Um recorte da apresentação, dos detalhes e da experiência que o buffet entrega.</p>
             </SectionHeader>
           </div>
         </Reveal>
@@ -39,7 +39,7 @@ export function GallerySection() {
                   Atmosfera
                 </p>
                 <h3 className="max-w-md font-display text-3xl leading-tight text-foreground lg:text-4xl">
-                  Ambientes preparados para receber bem e impressionar com elegância.
+                  Mesas preparadas para receber bem e impressionar com elegância.
                 </h3>
               </div>
             </div>
