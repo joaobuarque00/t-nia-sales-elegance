@@ -1,5 +1,5 @@
-const WHATSAPP_PHONE = "5500000000000";
-const WHATSAPP_MESSAGE = "Olá! Gostaria de um orçamento do Tânia Sales Buffet.";
+const WHATSAPP_PHONE = "5579996103016";
+const WHATSAPP_MESSAGE = "Olá, gostaria de realizar um orçamento com o Buffet Tânia Sales.";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 export function WhatsAppFloat() {

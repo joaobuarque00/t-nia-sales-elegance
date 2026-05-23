@@ -17,7 +17,6 @@ export function AboutSection() {
               height={1280}
               className="aspect-[4/5] w-full rounded-sm object-cover shadow-luxe"
             />
-            <div className="absolute -top-6 -left-6 hidden h-28 w-28 rounded-sm bg-wine-deep/40 backdrop-blur-sm md:block" />
           </div>
         </Reveal>
         <Reveal delay={150}>
@@ -26,7 +25,7 @@ export function AboutSection() {
             align="left"
             title={
               <>
-                Quinze anos criando{" "}
+                30 anos criando{" "}
                 <span className="italic text-gradient-gold">experiências inesquecíveis</span>
               </>
             }

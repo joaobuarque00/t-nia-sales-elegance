@@ -162,9 +162,9 @@ export const testimonials = [
 ];
 
 export const stats = [
-  { num: "15+", label: "Anos de tradição" },
-  { num: "1.200+", label: "Eventos realizados" },
-  { num: "98%", label: "Clientes satisfeitos" },
+  { num: "30+", label: "Anos de tradição" },
+  { num: "3.500+", label: "Festas realizadas" },
+  { num: "99%", label: "Clientes satisfeitos" },
   { num: "100%", label: "Personalizado" },
 ];
 
