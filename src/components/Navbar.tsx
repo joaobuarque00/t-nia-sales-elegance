@@ -48,10 +48,10 @@ export function Navbar() {
 
         <a
           href="#orcamento"
-          className="hidden min-h-11 items-center gap-2 rounded-sm bg-gradient-gold px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-onyx transition-all duration-500 hover:shadow-gold lg:inline-flex"
+          className="hidden min-h-11 items-center gap-2 rounded-sm bg-gradient-gold px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.16em] text-onyx transition-all duration-500 hover:shadow-gold lg:inline-flex"
         >
           <MessageCircle className="h-4 w-4" aria-hidden="true" />
-          Pedir Orçamento
+          Montar orçamento
         </a>
 
         <button
@@ -85,10 +85,10 @@ export function Navbar() {
             <a
               href="#orcamento"
               onClick={() => setOpen(false)}
-              className="mt-3 inline-flex min-h-12 items-center justify-center gap-2 rounded-sm bg-gradient-gold px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.22em] text-onyx"
+              className="mt-3 inline-flex min-h-12 items-center justify-center gap-2 rounded-sm bg-gradient-gold px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-onyx"
             >
               <MessageCircle className="h-4 w-4" aria-hidden="true" />
-              Pedir Orçamento
+              Montar orçamento
             </a>
           </div>
         </div>

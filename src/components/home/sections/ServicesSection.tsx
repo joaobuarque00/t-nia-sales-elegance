@@ -1,5 +1,8 @@
+import { MessageCircle } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
+import { WHATSAPP_URL } from "@/components/WhatsAppFloat";
 import { services } from "@/data/home-content";
+import { OutlineCta } from "../Cta";
 import { SectionHeader } from "../SectionHeader";
 
 export function ServicesSection() {
@@ -19,7 +22,10 @@ export function ServicesSection() {
                 </>
               }
             >
-              <p>Atendemos eventos de todos os portes com o mesmo padrão de excelência.</p>
+              <p>
+                Casamentos, aniversários, 15 anos, formaturas, eventos corporativos e festas
+                pequenas com o mesmo cuidado nos detalhes.
+              </p>
             </SectionHeader>
           </div>
         </Reveal>
@@ -39,6 +45,23 @@ export function ServicesSection() {
             );
           })}
         </div>
+
+        <Reveal delay={140}>
+          <div className="mt-12 flex flex-col items-center justify-between gap-5 border-y border-gold/15 py-7 text-center lg:flex-row lg:text-left">
+            <div className="flex max-w-2xl flex-col gap-2">
+              <div className="mx-auto flex items-center gap-3 text-gold lg:mx-0">
+                <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                <span className="text-[0.68rem] uppercase tracking-[0.2em]">
+                  Orçamento sem compromisso
+                </span>
+              </div>
+              <p className="font-light text-foreground/78">
+                Eventos grandes e pequenos com o mesmo cuidado nos detalhes.
+              </p>
+            </div>
+            <OutlineCta href={WHATSAPP_URL}>Falar com a equipe</OutlineCta>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

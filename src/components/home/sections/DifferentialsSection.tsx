@@ -15,7 +15,12 @@ export function DifferentialsSection() {
                   Por que escolher a <span className="italic text-gradient-gold">Tânia Sales</span>
                 </>
               }
-            />
+            >
+              <p>
+                Uma experiência completa para quem quer praticidade, apresentação bonita e uma
+                equipe que entende o valor de cada detalhe.
+              </p>
+            </SectionHeader>
           </div>
         </Reveal>
         <div className="grid gap-px border border-gold/15 bg-gold/15 md:grid-cols-2 lg:grid-cols-3">
@@ -23,7 +28,7 @@ export function DifferentialsSection() {
             const Icon = d.icon;
             return (
               <Reveal key={d.title} delay={i * 60}>
-                <div className="h-full bg-background p-8 transition-colors duration-500 hover:bg-card lg:p-10">
+                <div className="h-full bg-background p-7 transition-colors duration-500 hover:bg-card lg:p-10">
                   <div className="mb-5 flex items-center justify-between gap-4">
                     <span className="font-display text-sm text-gold/65">0{i + 1}</span>
                     <Icon className="h-5 w-5 text-gold/80" aria-hidden="true" />

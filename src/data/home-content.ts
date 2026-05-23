@@ -42,7 +42,7 @@ export type MenuCategory = {
 };
 
 export const homeImages = {
-  hero: buffetMesaFria,
+  hero: buffetVolAuVent,
   about: buffetCamaraoCrocante,
   menuFeature: menuFeatureImg,
   quoteBackground: buffetMorangos,
@@ -59,32 +59,32 @@ export const homeImages = {
 export const services: IconContent[] = [
   {
     title: "Casamentos",
-    desc: "Cerimônias inesquecíveis com requinte e atenção a cada detalhe.",
+    desc: "Buffet, decoração e atendimento para celebrar com elegância do início ao fim.",
     icon: Heart,
   },
   {
     title: "15 Anos",
-    desc: "A celebração da realeza da princesa, do tapete vermelho ao último brinde.",
+    desc: "Uma festa marcante, com cardápio e ambientação pensados para esse momento.",
     icon: Crown,
   },
   {
     title: "Aniversários",
-    desc: "Festas marcantes com gastronomia e ambientação personalizadas.",
+    desc: "Comida boa, apresentação bonita e estrutura para receber bem seus convidados.",
     icon: PartyPopper,
   },
   {
     title: "Festas Infantis",
-    desc: "Mundos encantados com cardápio que conquista crianças e adultos.",
+    desc: "Celebrações alegres, organizadas e com opções que agradam crianças e adultos.",
     icon: CakeSlice,
   },
   {
     title: "Formaturas",
-    desc: "Comemore a conquista com a sofisticação que ela merece.",
+    desc: "A comemoração da conquista com buffet completo e serviço bem conduzido.",
     icon: GraduationCap,
   },
   {
     title: "Corporativos",
-    desc: "Eventos institucionais com elegância, discrição e excelência.",
+    desc: "Eventos empresariais com pontualidade, apresentação e atendimento profissional.",
     icon: Building2,
   },
 ];
@@ -170,33 +170,33 @@ export const stats = [
 
 export const differentials: IconContent[] = [
   {
-    title: "Gastronomia Premiada",
-    desc: "Brigada de chefs criando experiências sensoriais únicas.",
+    title: "Comida de qualidade",
+    desc: "Cardápios preparados com cuidado, boa apresentação e sabor para impressionar os convidados.",
     icon: ChefHat,
   },
   {
-    title: "Decoração Autoral",
-    desc: "Cenografia exclusiva, criada para a história do seu evento.",
+    title: "Decoração diferenciada",
+    desc: "Ambientação elegante para valorizar a mesa, o salão e o estilo da sua celebração.",
     icon: Flower2,
   },
   {
-    title: "Atendimento de Excelência",
-    desc: "Equipe maître treinada para um serviço impecável e discreto.",
+    title: "Atendimento personalizado",
+    desc: "Acompanhamento próximo do primeiro contato até o dia do evento.",
     icon: UsersRound,
   },
   {
-    title: "Estrutura Completa",
-    desc: "Da louça à iluminação, todos os elementos no mais alto padrão.",
+    title: "Eventos grandes e pequenos",
+    desc: "Estrutura adaptável para festas íntimas, eventos familiares e celebrações maiores.",
     icon: Gem,
   },
   {
-    title: "Resposta Rápida",
-    desc: "Orçamento ágil, planejamento eficiente, execução perfeita.",
+    title: "Rapidez no orçamento",
+    desc: "Você envia as informações principais e recebe uma proposta clara para avançar com segurança.",
     icon: Clock3,
   },
   {
-    title: "Personalização Total",
-    desc: "Cada evento é desenhado sob medida para você e sua história.",
+    title: "Pacotes sob medida",
+    desc: "Orçamentos ajustados ao tipo de festa, número de convidados e estilo desejado.",
     icon: WandSparkles,
   },
 ];
@@ -204,17 +204,17 @@ export const differentials: IconContent[] = [
 export const quoteSteps: IconContent[] = [
   {
     title: "Conversa inicial",
-    desc: "Você conta data, local, número de convidados e estilo do evento.",
+    desc: "Você envia as informações principais pelo WhatsApp para entendermos o seu evento.",
     icon: MessageCircle,
   },
   {
     title: "Proposta sob medida",
-    desc: "A equipe organiza cardápio, estrutura e atendimento em uma proposta personalizada.",
+    desc: "A equipe monta uma sugestão com buffet, estrutura e atendimento de acordo com sua necessidade.",
     icon: CalendarCheck,
   },
   {
-    title: "Execução impecável",
-    desc: "Do preparo à finalização, tudo é conduzido para você aproveitar cada instante.",
+    title: "Evento bem cuidado",
+    desc: "Do preparo à finalização, tudo é conduzido para você aproveitar a festa com tranquilidade.",
     icon: CheckCircle2,
   },
 ];
@@ -222,8 +222,10 @@ export const quoteSteps: IconContent[] = [
 export const quoteDetails = [
   "Data do evento",
   "Quantidade de convidados",
-  "Tipo de celebração",
-  "Local ou cidade",
+  "Tipo de festa",
+  "Cidade ou local",
+  "Estilo desejado",
+  "Faixa de orçamento, se quiser informar",
 ];
 
 export const gallery = [
@@ -238,7 +240,7 @@ export const gallery = [
 export const heroPreview = [
   { src: buffetSaladaCamarao, alt: "Salada de camarão em travessa de vidro" },
   { src: buffetCamaraoCrocante, alt: "Camarões crocantes servidos com molho" },
-  { src: buffetVolAuVent, alt: "Prato folhado decorado com molho e flores comestíveis" },
+  { src: buffetArrozCamarao, alt: "Mesa de buffet com arroz, camarões e acompanhamentos" },
 ];
 
 export const eventPills = ["Casamentos", "15 anos", "Aniversários", "Corporativos"];
@@ -246,24 +248,24 @@ export const eventPills = ["Casamentos", "15 anos", "Aniversários", "Corporativ
 export const signatureHighlights: IconContent[] = [
   {
     title: "Buffet completo",
-    desc: "Gastronomia, decoração e serviço pensados como uma única experiência.",
+    desc: "Gastronomia, decoração e atendimento pensados como uma experiência completa.",
     icon: Sparkles,
   },
   {
-    title: "Tudo sob medida",
-    desc: "Cada evento é tratado como único, da primeira degustação ao último brinde.",
+    title: "Orçamentos sob medida",
+    desc: "Cada proposta é ajustada ao tipo de celebração, convidados e estilo desejado.",
     icon: WandSparkles,
   },
   {
     title: "Atendimento próximo",
-    desc: "Uma equipe preparada para conduzir os detalhes com elegância e discrição.",
+    desc: "Cuidado do primeiro contato até o dia do evento, com clareza e atenção aos detalhes.",
     icon: UsersRound,
   },
 ];
 
 export const aboutHighlights = [
-  "Gastronomia refinada",
-  "Decoração autoral",
-  "Serviço impecável",
-  "Evento sob medida",
+  "Comida de qualidade",
+  "Decoração elegante",
+  "Atendimento personalizado",
+  "Pacotes sob medida",
 ];

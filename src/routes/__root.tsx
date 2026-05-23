@@ -72,18 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Tânia Sales Buffet — Buffet Premium para Eventos Inesquecíveis" },
+      { title: "Tânia Sales Buffet — Buffet Completo para Festas e Eventos" },
       {
         name: "description",
         content:
-          "Buffet de luxo para casamentos, 15 anos, aniversários, formaturas e eventos corporativos. Gastronomia refinada, decoração sofisticada e atendimento impecável.",
+          "Buffet completo com gastronomia, decoração e atendimento personalizado para casamentos, aniversários, 15 anos, formaturas e eventos corporativos.",
       },
       { name: "author", content: "Tânia Sales Buffet" },
-      { property: "og:title", content: "Tânia Sales Buffet — Eventos de Luxo" },
+      { property: "og:title", content: "Tânia Sales Buffet — Buffet Completo para Eventos" },
       {
         property: "og:description",
         content:
-          "Buffet premium com gastronomia refinada e decoração sofisticada para o seu evento dos sonhos.",
+          "Gastronomia, decoração e atendimento personalizado para transformar sua festa em um evento inesquecível.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

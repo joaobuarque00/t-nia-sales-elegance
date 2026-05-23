@@ -25,19 +25,26 @@ export function AboutSection() {
             align="left"
             title={
               <>
-                30 anos criando{" "}
-                <span className="italic text-gradient-gold">experiências inesquecíveis</span>
+                30 anos cuidando de{" "}
+                <span className="italic text-gradient-gold">celebrações especiais</span>
               </>
             }
           />
-          <p className="mb-6 text-lg font-light leading-relaxed text-foreground/80">
-            Nascemos do desejo de oferecer mais que um buffet — uma assinatura de elegância. Cada
-            evento é tratado como único, da primeira degustação ao último brinde.
+          <p className="mb-6 text-lg font-light leading-relaxed text-foreground/82">
+            A Tânia Sales Buffet acompanha cada cliente de perto para transformar ideias em uma
+            festa bem servida, bonita e organizada. O atendimento é feito com escuta, clareza e
+            cuidado para entender o tamanho do evento, o estilo desejado e o que cabe no orçamento.
           </p>
           <p className="mb-8 font-light leading-relaxed text-muted-foreground">
-            Unimos a tradição da alta gastronomia, decoração autoral e atendimento à altura dos seus
-            convidados. Para que sua única preocupação seja aproveitar cada instante.
+            São mais de 3.500 festas realizadas com gastronomia, decoração e equipe preparada para
+            eventos grandes e pequenos. A proposta é unir elegância e proximidade, para que você se
+            sinta seguro desde o primeiro contato até o último detalhe do evento.
           </p>
+          <div className="mb-7 border-l border-gold/40 bg-card/35 px-5 py-4">
+            <p className="text-sm font-light leading-relaxed text-foreground/78">
+              Atendimento personalizado do primeiro contato até o dia do evento.
+            </p>
+          </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {aboutHighlights.map((item) => (
               <div

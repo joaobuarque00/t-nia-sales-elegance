@@ -5,6 +5,11 @@ import { homeImages, quoteDetails, quoteSteps } from "@/data/home-content";
 import { OutlineCta, PrimaryCta } from "../Cta";
 import { SectionHeader } from "../SectionHeader";
 
+const trustMessages = [
+  "Orçamentos sob medida para cada tipo de celebração.",
+  "Atendimento personalizado do primeiro contato até o dia do evento.",
+];
+
 export function BudgetSection() {
   return (
     <section id="orcamento" className="relative overflow-hidden py-24 lg:py-36">
@@ -20,22 +25,30 @@ export function BudgetSection() {
         <div className="grid items-start gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
             <SectionHeader
-              kicker="Vamos começar"
+              kicker="Orçamento"
               align="left"
               title={
                 <>
-                  O seu evento dos sonhos começa com uma{" "}
-                  <span className="italic text-gradient-gold">conversa</span>
+                  Monte seu orçamento com a{" "}
+                  <span className="italic text-gradient-gold">equipe Tânia Sales</span>
                 </>
               }
             />
-            <p className="mb-10 max-w-xl text-lg font-light text-foreground/80">
-              Receba uma proposta personalizada em até 24 horas. Sem compromisso, com toda a atenção
-              que você merece.
+            <p className="mb-8 max-w-xl text-lg font-light leading-relaxed text-foreground/80">
+              Envie as informações principais pelo WhatsApp e receba uma proposta clara para o tipo
+              de festa que você quer realizar.
             </p>
+            <div className="mb-8 grid gap-3">
+              {trustMessages.map((message) => (
+                <div key={message} className="flex items-start gap-3 text-sm text-foreground/78">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 flex-none text-gold" aria-hidden="true" />
+                  <span>{message}</span>
+                </div>
+              ))}
+            </div>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <PrimaryCta href={WHATSAPP_URL}>Solicitar Orçamento</PrimaryCta>
-              <OutlineCta href={WHATSAPP_URL}>Chamar no WhatsApp</OutlineCta>
+              <PrimaryCta href={WHATSAPP_URL}>Pedir orçamento pelo WhatsApp</PrimaryCta>
+              <OutlineCta href={WHATSAPP_URL}>Falar com a equipe</OutlineCta>
             </div>
           </Reveal>
 
@@ -74,7 +87,7 @@ export function BudgetSection() {
               <div className="rounded-sm border border-gold/20 bg-card/70 p-6 backdrop-blur-md lg:p-8">
                 <div className="mb-5 flex items-center gap-3">
                   <GlassWater className="h-5 w-5 text-gold" aria-hidden="true" />
-                  <h3 className="font-display text-xl">Para agilizar seu orçamento</h3>
+                  <h3 className="font-display text-xl">O que enviar no WhatsApp</h3>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-2">
                   {quoteDetails.map((detail) => (
